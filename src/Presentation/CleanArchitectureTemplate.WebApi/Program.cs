@@ -3,14 +3,13 @@ using CleanArchitectureTemplate.Domain.Identity;
 using CleanArchitectureTemplate.Persistence;
 using CleanArchitectureTemplate.Shared;
 using CleanArchitectureTemplate.Persistence.Identity;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Juridispo", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Clean Architecture APIs", Version = "v1" });
 
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
     {

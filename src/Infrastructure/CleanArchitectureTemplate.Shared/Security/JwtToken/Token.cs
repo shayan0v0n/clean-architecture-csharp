@@ -22,8 +22,6 @@ namespace CleanArchitectureTemplate.Shared.Security.JwtToken
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
-                //issuer: "www.Setaresim.com",
-                //audience: "www.Setaresim.com",
                 claims: claims,
                 expires: DateTime.Now.AddHours(duration),
                 signingCredentials: creds);

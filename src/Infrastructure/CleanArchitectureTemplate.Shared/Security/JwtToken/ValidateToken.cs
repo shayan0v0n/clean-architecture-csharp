@@ -46,7 +46,6 @@ namespace CleanArchitectureTemplate.Shared.Security.JwtToken
         public static IEnumerable<Claim> GetClaims(ClaimsPrincipal claimsPrincipal)
         {
             var identity = (ClaimsIdentity)claimsPrincipal.Identity;
-            //var claims = identity.FindAll("UserId");
             var claims = identity.Claims;
             return claims;
         }
